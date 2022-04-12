@@ -6,7 +6,7 @@ const SearchResults = ({ results }) => {
                 <div
                     className="max-w-xl mb-8 "
                     key={result.link}>
-                    <div className="group">
+                    <div className="group"> 
                         <a href={result.link} className="text-sml">{result.formattedUrl}</a>
                         <a href={result.link} className="text-sml"><h2 className="truncate text-xl text-blue-800 font-medium group-hover:underline">{result.title}</h2></a>
 
