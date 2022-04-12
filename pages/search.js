@@ -25,7 +25,7 @@ function search({ results }) {
 
 export default search
 export async function getServerSideProps(context) {
-    const useDummyData = false;
+    const useDummyData = true;
     const startIndex = context.query.start || "0"
     const data = useDummyData ? response : await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.NEXT_PUBLIC_API_KEY}&cx=${process.env.NEXT_PUBLIC_CONTEXT}&q=${context.query.term}&start=${startIndex}`).then(res => res.json())
     //After results renderd return it to the client
