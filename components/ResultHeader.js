@@ -25,7 +25,7 @@ const ResultHeader = () => {
                         className="flex-grow w-full focus:outline-none "
                         type="text"
                         ref={searchInputRef}
-                        defaultValue={searchInputRef.current.value}
+                        defaultValue={router.query.term}
                     />
                     <XIcon
                         onClick={() => searchInputRef.current.value = ''}
